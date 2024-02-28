@@ -6,9 +6,36 @@
     <link rel="stylesheet" href="./styles/output.css">
     <title>phone hunter</title>
 </head>
-<body>
-    <header></header>
-    <main></main>
+<body class="">
+    <header>
+        <h1 class="text-6xl text-center font-bold">Phone Hunting</h1>
+    </header>
+    <main class="w-full max-w-screen-xl mx-auto">
+        <div class="">
+            <input type="text" id="searchField" class="grow input input-bordered w-full max-w-xs" placeholder="Search" />
+            <button class="btn btn-accent" onclick="handleSearch()">Search</button>
+        </div>
+
+        <!-- spineer -->
+        <div id="loadingSpinner" class="text-center my-40 hidden">
+            <span class="loading loading-spinner text-primary loading-lg"></span>
+        </div>
+
+        <div id="phoneContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center">
+
+        </div>
+            <br>
+        <div id="showAllContainer" class="hidden text-center my-80">
+            <button onclick="handleShowAll()" class="btn btn-info">Show All</button>
+        </div>
+
+       
+            <!-- Open the modal using ID.showModal() method -->
+            <dialog id="showDetails" class="modal modal-middle">
+
+            </dialog>
+        
+    </main>
     <footer></footer>
     
     <script src="./js/api.js"></script>
